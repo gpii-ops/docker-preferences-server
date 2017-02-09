@@ -5,7 +5,7 @@ preferences_server_environment: "{{ lookup('env', 'NODE_ENV') | default('gpii.pr
 
 # Although this has been already specified in the GPII/universal, it's needed here for the deploy phase again.
 nodejs_app_name: universal
-nodejs_app_start_script: gpii.js
+nodejs_app_start_script: 'node_modules/kettle/init.js gpii/node_modules/preferencesServer/configs'
 
 # self-test configuration for CONTAINER_TEST mode
 nodejs_app_host_address: 127.0.0.1
