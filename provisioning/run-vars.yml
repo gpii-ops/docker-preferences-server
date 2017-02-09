@@ -1,6 +1,7 @@
 # Uses environment variables passed to the container on `docker run`
 ---
 preferences_server_couchdb_host_address: "{{ lookup('env', 'COUCHDB_HOST_ADDRESS')  | default('localhost',true) }}"
+preferences_server_couchdb_host_port: 5984
 preferences_server_environment: "{{ lookup('env', 'NODE_ENV') | default('gpii.preferencesServer.config.production',true) }}"
 
 # Although this has been already specified in the GPII/universal, it's needed here for the deploy phase again.
@@ -9,7 +10,7 @@ nodejs_app_start_script: 'node_modules/kettle/init.js gpii/node_modules/preferen
 
 # self-test configuration for CONTAINER_TEST mode
 nodejs_app_host_address: 127.0.0.1
-nodejs_app_tcp_port: 8082
+nodejs_app_tcp_port: 8081
 nodejs_app_test_http_endpoint: /preferences/carla
 nodejs_app_test_http_status_code: 200
 nodejs_app_test_string: registry.gpii.net
