@@ -1,3 +1,5 @@
+**DEPRECATED**: The settings that this image manages are now available through environment variables in [GPII/universal](https://github.com/GPII/universal).
+
 ## GPII Preferences Server Dockerfile - Ansible version
 
 Builds a GPII Preference Server Docker container image. The image is built using the [Ansible role](https://github.com/gpii-ops/ansible-preferences-server).
